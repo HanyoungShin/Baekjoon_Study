@@ -1,0 +1,13 @@
+n = int(input(""))
+scoreList = [None] * n
+newScoreList = [None] * n
+sum = 0
+
+scoreList = list(map(float, input().split()))
+max = max(scoreList)
+for i in range(n):
+    newScoreList[i] = scoreList[i] / max * 100
+for i in range(n):
+    sum += newScoreList[i]
+
+print(sum / n)
